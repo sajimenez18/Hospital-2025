@@ -1,12 +1,17 @@
 package vistas;
 import javax.swing.*;
+
+import vistas.ventanas.Dashboard;
+
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import vistas.ventanas.Dashboard;
 public class LoginPanel {
 
     private JPanel panelLogin;
@@ -14,8 +19,6 @@ public class LoginPanel {
     public LoginPanel(){ 
         panelLogin = new JPanel();
         panelLogin.setSize(500, 500);
-        panelLogin.setOpaque(true);
-        panelLogin.setBackground(Color. PINK);
         panelLogin.setLayout(new GridBagLayout());
 
         //Admin Diseno
@@ -27,7 +30,6 @@ public class LoginPanel {
         //titulo
         JLabel titulo = new JLabel("Login");
         titulo.setOpaque(true);
-        titulo.setBackground(Color.BLUE);
         gbc.gridy=0;
         gbc.gridx=0;
         gbc.gridwidth = 2;
@@ -57,6 +59,20 @@ public class LoginPanel {
         gbc.anchor = GridBagConstraints.EAST;
         gbc.fill = GridBagConstraints.NONE;
         panelLogin.add(btnIngresar,gbc);
+
+        btnIngresar.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                System.out.println("Boton presionado");
+
+                Component comp = (Component) e.getSource();
+                JFrame ventanaPapa = (JFrame) SwingUtilities.getWindowAncestor(comp);
+                ventanaPapa.dispose();;
+
+                new Dashboard();
+            }
+        });
+
     }
     public JPanel getJPanel(){
         return panelLogin;
