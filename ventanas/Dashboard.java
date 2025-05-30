@@ -1,4 +1,4 @@
-package vistas.ventanas;
+package ventanas;
 import javax.swing.JFrame;
 import java.awt.BorderLayout;
 

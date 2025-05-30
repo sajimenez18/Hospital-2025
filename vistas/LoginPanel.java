@@ -1,7 +1,7 @@
 package vistas;
 import javax.swing.*;
 
-import vistas.ventanas.Dashboard;
+import ventanas.Dashboard;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -11,7 +11,8 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import vistas.ventanas.Dashboard;
+import control.LoginControler;
+
 public class LoginPanel {
 
     private JPanel panelLogin;
@@ -45,7 +46,7 @@ public class LoginPanel {
         panelLogin.add(entradaCorreo,gbc);
 
         //Contraseña
-        JTextField entradaContraseña = new JTextField("Contraseña");
+        JTextField entradaContraseña = new JTextField("Contraseña: ");
         entradaContraseña.setSize(new Dimension(100,50));
         gbc.gridx = 1;
         gbc.gridy =2;
@@ -65,11 +66,17 @@ public class LoginPanel {
             public void actionPerformed(ActionEvent e){
                 System.out.println("Boton presionado");
 
+                //
+                String entradaUsuario = entradaCorreo.getText();
+                String entradaContra = entradaContraseña.getText();
+
+                if(new LoginControler().validacionDatos(entradaUsuario, entradaContra)){
                 Component comp = (Component) e.getSource();
                 JFrame ventanaPapa = (JFrame) SwingUtilities.getWindowAncestor(comp);
                 ventanaPapa.dispose();;
 
                 new Dashboard();
+                }
             }
         });
 
