@@ -1,4 +1,4 @@
-package vistas;
+package paneles;
 import javax.swing.*;
 
 import ventanas.Dashboard;
@@ -39,14 +39,14 @@ public class LoginPanel {
         panelLogin.add(titulo, gbc);
 
         //Usuario
-        JTextField entradaCorreo = new JTextField("Usuario: ");
+        JTextField entradaCorreo = new JTextField("");
         entradaCorreo.setSize(new Dimension(100,50));
         gbc.gridx = 1;
         gbc.gridy =1;
         panelLogin.add(entradaCorreo,gbc);
 
         //Contraseña
-        JTextField entradaContraseña = new JTextField("Contraseña: ");
+        JTextField entradaContraseña = new JTextField("");
         entradaContraseña.setSize(new Dimension(100,50));
         gbc.gridx = 1;
         gbc.gridy =2;

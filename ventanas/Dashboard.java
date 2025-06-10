@@ -2,6 +2,10 @@ package ventanas;
 
 import java.awt.BorderLayout;
 import javax.swing.*;
+import datos.Pacientes;
+import javax.swing.table.DefaultTableModel;
+
+import paneles.MenuLateralPanel;
 
 public class Dashboard {
 
@@ -13,13 +17,13 @@ public class Dashboard {
         ventanaNueva.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventanaNueva.setLayout(new BorderLayout());
 
-        Tabla tabla = new Tabla();
-        ventanaNueva.add(tabla, BorderLayout.CENTER);  // Agregar tabla a la ventana
+        ventanaNueva.add(new MenuLateralPanel(), BorderLayout.WEST);
+        ventanaNueva.add(new Tabla());
 
         ventanaNueva.setVisible(true);  // Mostrar ventana
     }
 
     public static void main(String[] args) {
-        new Dashboard();  // Llamada directa sin invokeLater
+        new Dashboard(); 
     }
 }
