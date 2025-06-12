@@ -2,10 +2,9 @@ package ventanas;
 
 import java.awt.BorderLayout;
 import javax.swing.*;
-import datos.Pacientes;
-import javax.swing.table.DefaultTableModel;
 
 import paneles.MenuLateralPanel;
+import paneles.header;
 
 public class Dashboard {
 
@@ -18,7 +17,8 @@ public class Dashboard {
         ventanaNueva.setLayout(new BorderLayout());
 
         ventanaNueva.add(new MenuLateralPanel(), BorderLayout.WEST);
-        ventanaNueva.add(new Tabla());
+        ventanaNueva.add(new header(), BorderLayout.NORTH); 
+        ventanaNueva.add(new Tabla(), BorderLayout.CENTER); 
 
         ventanaNueva.setVisible(true);  // Mostrar ventana
     }
