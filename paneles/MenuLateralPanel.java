@@ -20,7 +20,7 @@ public class MenuLateralPanel extends JPanel {
         // Crear botones
         JButton entradaCitar = crearBoton("Citar");
         JButton entradaReceta = crearBoton("Recetar");
-        JButton entradaSignar = crearBoton("Signar camilla");
+        JButton entradaSignar = crearBoton("Asignar camilla");
         JButton entradaChequeo = crearBoton("Chequeo");
         JButton entradaAlta = crearBoton("Dar de Alta");
         JButton entradaInfo = crearBoton("Crear informes clínicos");
