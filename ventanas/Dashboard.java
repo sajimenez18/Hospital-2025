@@ -1,10 +1,9 @@
 package ventanas;
 
-import java.awt.BorderLayout;
+import java.awt.*;
 import javax.swing.*;
 
-import paneles.MenuLateralPanel;
-import paneles.header;
+import paneles.*;
 
 public class Dashboard {
 
@@ -12,12 +11,12 @@ public class Dashboard {
 
     public Dashboard() {
         ventanaNueva = new JFrame("Vistas Doc");
-        ventanaNueva.setSize(1000, 800);
+        ventanaNueva.setExtendedState(JFrame.MAXIMIZED_BOTH);
         ventanaNueva.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventanaNueva.setLayout(new BorderLayout());
 
         ventanaNueva.add(new MenuLateralPanel(), BorderLayout.WEST);
-        ventanaNueva.add(new header(), BorderLayout.NORTH); 
+        ventanaNueva.add(new Header(), BorderLayout.NORTH); 
         ventanaNueva.add(new Tabla(), BorderLayout.CENTER); 
 
         ventanaNueva.setVisible(true);  // Mostrar ventana

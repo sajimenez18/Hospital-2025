@@ -75,6 +75,7 @@ public class LoginPanel {
                 JFrame ventanaPapa = (JFrame) SwingUtilities.getWindowAncestor(comp);
                 ventanaPapa.dispose();;
 
+                
                 new Dashboard();
                 }
             }

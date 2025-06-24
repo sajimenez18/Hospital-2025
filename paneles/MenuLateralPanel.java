@@ -12,7 +12,7 @@ public class MenuLateralPanel extends JPanel {
     public MenuLateralPanel() {
         this.setPreferredSize(new Dimension(400, 800));
         this.setOpaque(true);
-        this.setBackground(Color.RED);
+        this.setBackground(new Color( 207, 230, 225 ));
         
         // Layout vertical
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -26,7 +26,7 @@ public class MenuLateralPanel extends JPanel {
         JButton entradaInfo = crearBoton("Crear informes clínicos");
 
         // Agregar botones con espacio entre ellos
-        this.add(Box.createRigidArea(new Dimension(0, 150)));
+        this.add(Box.createRigidArea(new Dimension(0, 100)));
         this.add(entradaCitar);
         this.add(Box.createRigidArea(new Dimension(0, 20)));
         this.add(entradaReceta);
