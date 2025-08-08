@@ -3,15 +3,14 @@ import javax.swing.*;
 
 import ventanas.Dashboard;
 
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import control.LoginControler;
+
 
 public class LoginPanel {
 
@@ -75,6 +74,7 @@ public class LoginPanel {
                 JFrame ventanaPapa = (JFrame) SwingUtilities.getWindowAncestor(comp);
                 ventanaPapa.dispose();;
 
+                
                 new Dashboard();
                 }
             }

@@ -1,28 +1,28 @@
 package paneles;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.BorderLayout;
+import java.awt.*;
+import javax.swing.*;
 
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+public class Header extends JPanel {
 
-public class header extends JPanel {
-
-    public header() {
+    public Header() {
         this.setPreferredSize(new Dimension(1000, 100)); // Aumenta el ancho si es necesario
         this.setOpaque(true);
-        this.setBackground(Color.WHITE);
+        this.setBackground(new Color(154, 199, 188));
         this.setLayout(new BorderLayout()); // Para posicionar izquierda/derecha
 
         // Crear textos
-        JLabel textoIzquierda = new JLabel("hospital");
+        JLabel textoIzquierda = new JLabel("Hospital");
         JLabel textoDerecha = new JLabel("Sajimenez y Mr-afk23");
 
         // Margen (opcional)
         textoIzquierda.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 20, 0, 0));
+        textoIzquierda.setForeground(Color.WHITE);
+        textoIzquierda.setFont(new Font("Arial", Font.BOLD, 25));
+
         textoDerecha.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 20));
+        textoDerecha.setForeground(Color.WHITE);
+        textoDerecha.setFont(new Font("Arial", Font.BOLD, 24));
 
         // Agregar textos al panel
         this.add(textoIzquierda, BorderLayout.WEST);

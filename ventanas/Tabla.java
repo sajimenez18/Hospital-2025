@@ -1,7 +1,7 @@
 package ventanas;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
+import javax.swing.table.*;
 
 import datos.Pacientes;
 
